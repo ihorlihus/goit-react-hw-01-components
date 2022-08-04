@@ -1,4 +1,5 @@
-export const Statistics = ({title, stats}) => {
+// import PropTypes from "prop-types";
+export const Statistics = ({ title, stats }) => {
     return (<section>
         {title && (
             <h2>{title}</h2>
@@ -14,3 +15,7 @@ export const Statistics = ({title, stats}) => {
 </section>)
 }
 
+// Statistics.propTypes = {
+//   title: PropTypes.string,
+//   data.label: PropTypes.string,
+// }
