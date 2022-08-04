@@ -4,6 +4,7 @@ export const Profile = ({username, tag, location, avatar, folovers, views, likes
     <img
       src={avatar}
       alt={username}
+      width="48"
     />
     <p>{username}</p>
     <p>@{tag}</p>

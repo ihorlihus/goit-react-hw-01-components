@@ -2,6 +2,8 @@ import { Profile } from "./Profile/Profile";
 import { Statistics } from "./Statistics/Statistics";
 import { FriendList } from "./FriendList/FriendList";
 import { FriendListItem } from "./FriendList/FriendListItem";
+import { TransactionHistory } from "./TransactionHistory/TransactionHistory";
+import transactions from "../transactions.json";
 import friends from "../friends.json";
 import data from "../data.json";
 import user from "../user.json";
@@ -19,16 +21,15 @@ export const App = () => {
         likes={user.stats.likes}
       />
       <Statistics
-        key={data.id}
         title="Upload stats"
         stats={data}
       />
-      ===no render===
       <FriendList>
         <FriendListItem
-          key={friends.id}
           friends={friends} />
       </FriendList>
+      <TransactionHistory
+        items={transactions} />
     </div>
   );
 };
