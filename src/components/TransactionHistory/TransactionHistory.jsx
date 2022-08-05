@@ -1,4 +1,5 @@
-export const TransactionHistory = ({items}) => {
+import PropTypes from "prop-types";
+export const TransactionHistory = ({ items }) => {
     return (<table>
   <thead>
     <tr>
@@ -16,4 +17,8 @@ export const TransactionHistory = ({items}) => {
     </tr>))}
   </tbody>
 </table>)
+}
+
+TransactionHistory.propTypes = {
+  items: PropTypes.array
 }

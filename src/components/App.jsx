@@ -16,19 +16,25 @@ export const App = () => {
         tag={user.tag}
         location={user.location}
         avatar={user.avatar}
-        folovers={user.stats.folovers}
+        followers={user.stats.followers}
         views={user.stats.views}
         likes={user.stats.likes}
       />
       <Statistics
         title="Upload stats"
         stats={data}
+        
       />
-      <FriendList>
-        <FriendListItem
-          friends={friends} />
+      <FriendList
+        friends={friends}>
+        {friends.map(friend => (<FriendListItem
+        key={friend.id}
+        isOnline={friend.isOnline}
+        name={friend.name}
+        avatar={friend.avatar}>
+      </FriendListItem>))}
       </FriendList>
-
+      
       <TransactionHistory
         items={transactions} />
     </div>
